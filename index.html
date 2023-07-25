@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/edit.css">
+
+</head>
+
+<body>
+
+
+
+    <center>
+        <h1 style="margin-top: 20px;">Task Planner</h1>
+    </center>
+    <div class="container">
+
+        <div class="task">
+            <form action="#" class="myForm">
+                <label for="taskname" style="margin: 10px;">Task Name</label>
+                <input name="taskname" type="text" id="taskname" placeholder="Enter task name" style="margin: -2%;">
+                <p id="taskLabel" style="color:red;margin: 8px;"></p>
+
+                <label for="subtaskname" style="margin: 10px;">Sub task Name</label>
+                <input name="" type="text" id="subtaskname" placeholder="Enter sub task name" style="margin: -13px;">
+                <p id="subtaskLabel" style="color:red;"></p>
+
+                <label for="startdate" style="margin: 10px;">Start date</label>
+                <input type="date" name="startdate" id="startdate" class="start" style="margin: -10px;">
+                <p id="startdatelabel" style="color:red;"></p>
+
+                <label for="enddate" style="margin-top: -2px;">End date</label>
+                <input type="date" name="enddate" id="enddate" class="end" style="margin: -15px;">
+                <p id="enddateLabel" style="color:red;"></p>
+
+                <label for="status" style="margin: 8px;">Status</label>
+                <select id="status" class="status1" style="margin: -10px;">
+                    <option value="none">select</option>
+                    <option value="Inprogress">Inprogress</option>
+                    <option value="passed">passed</option>
+                    <option value="completed">completed</option>
+                    <option value="cancled">cancelled</option>
+                    <option value="passed due">Passed due</option>
+                </select>
+                <p id="statusLabel" style="color:red;"></p>
+                <p id="disc" style="color: red;"></p>
+
+                <input type="button" value="Add Detail" onclick="validate()" class="custom-button add"
+                    style="margin-top: -30px;">
+
+            </form>
+        </div>
+        <div class="table_sec">
+            <input type=" text" id="search" onkeyup="search()" class="searchbar" placeholder="Search...">
+
+            <table class="table">
+                <tr>
+                    <th>task</th>
+                    <th>sub_task</th>
+                    <th>action</th>
+                </tr>
+                <tbody id="table1"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="edit-data" id="edit1">
+            <form action="#" class="myForm1">
+                <input type="hidden" id="idx1">
+                <input type="hidden" id="sub">
+                <label for="edit-taskname">Task Name</label>
+                <input name="edit-taskname" type="text" id="edit-taskname">
+                <p id="empIdErrorLabel1" style="color:red;"></p>
+
+                <label for="edit-startdate">startdate</label>
+                <input type="date" name="edit-startdate" id="edit-startdate1">
+                <p id="empIdErrorLabel" style="color:red;"></p>
+
+                <label for="edit-enddate">enddate</label>
+                <input type="date" name="edit-enddate" id="edit-enddate1">
+                <p id="empIdErrorLabel" style="color:red;"></p>
+
+                <label for="edit-status">status</label>
+                <select id="edit-status1">
+                    <option value="none">select</option>
+                    <option value="Inprogress">Inprogress</option>
+                    <option value="passed">passed</option>
+                    <option value="completed">completed</option>
+                    <option value="cancled">cancelled</option>
+                    <option value="passed due">Passed due</option>
+                </select>
+                <p id="empIdErrorLabel1" style="color:red;"></p>
+
+                <input type="button" value="Update Detail" onclick="closepopup()" class="custom-button close">
+            </form>
+
+    </div>
+
+    <script src="script/script.js"></script>
+    <script src="script/edit.js"></script>
+    <script src="script/validation.js"></script>
+    <script src="script/search.js"></script>
+    <script src="script/delete.js"></script>
+
+</body>
+
+
+
+
+</html>
